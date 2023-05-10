@@ -3,10 +3,10 @@ const {createApp} =  Vue
 createApp({
     data() {
       return {
-        newTask: {
+         newTaskModel: {
             text: "",
             status: false,
-        },
+        }, 
 
        tasks: [
         {
@@ -32,8 +32,10 @@ createApp({
 
         addTask(){
             
-            console.log(this.newTask)
-            this.tasks.push(this.newTask)
+            let newTask = {...this.newTaskModel}
+
+            console.log(newTask)
+            this.tasks.push(newTask)
         }
 
     },
