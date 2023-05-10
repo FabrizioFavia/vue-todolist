@@ -3,3 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    padding: 3em;
+}
+
+.styleNone{
+    list-style: none;
+    margin-left: 0;
+}
+
+.display{
+    display: block;
+}
+
+.todoListContainer{
+    max-width: 500px;
+    margin: 0 auto;
+}

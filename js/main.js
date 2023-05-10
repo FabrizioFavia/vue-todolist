@@ -3,6 +3,11 @@ const {createApp} =  Vue
 createApp({
     data() {
       return {
+        newTask: {
+            text: "",
+            status: false,
+        },
+
        tasks: [
         {
             text: "Fai la spesa",
@@ -19,14 +24,16 @@ createApp({
         {
             text: "Vai in palestra",
             status: false,
-        },
+        }
        ]
       }
     },
     methods: {
 
         addTask(){
-            console.log(this.tasks)
+            
+            console.log(this.newTask)
+            this.tasks.push(this.newTask)
         }
 
     },
