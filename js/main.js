@@ -31,11 +31,17 @@ createApp({
     methods: {
 
         addTask(){
-            
-            let newTask = {...this.newTaskModel}
+            let newTask = {...this.newTaskModel};
+            console.log(newTask);
+            if (newTask.text.length > 3) {
+                this.tasks.push(newTask);
+                this.newTaskModel.text = "";
+            } 
+        },
 
-            console.log(newTask)
-            this.tasks.push(newTask)
+        removeTask(){
+            
+
         }
 
     },

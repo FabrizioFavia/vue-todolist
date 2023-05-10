@@ -15,15 +15,20 @@
 <body>
 
     <div id="app">
-        <div class="todoListContainer border rounded">
-            <input class="display" v-model="newTaskModel.text" type="text" placeholder="Aggiungi Task">
+        <div class="todoListContainer border rounded p-3">
+            <input class="display" @keyup.enter="addTask" v-model="newTaskModel.text" type="text"
+                placeholder="Aggiungi Task">
             <button class="btn btn-primary mt-3 p-1" @click="addTask">Aggiungi Task</button>
             <ul class="mt-3">
                 <template v-for="(task, i) in tasks">
-                    <div class="d-flex align-items-center mt-3">
-                        <li class="styleNone">{{task.text}}</li>
-                        <button class="btn btn-danger p-1 ms-3" @click="removeTask">Rimuovi</button>
-                        <button class="btn btn-warning p-1 ms-3" @click="changeStatus">Modifica stato</button>
+                    <div class="d-flex align-items-center  justify-content-between mt-3">
+                        <div>
+                            <li class="styleNone">{{task.text}}</li>
+                        </div>
+                        <div>
+                            <button class="btn btn-danger p-1 ms-3 ps-2 pe-2" @click="removeTask(i)">X</button>
+                            <button class="btn btn-warning p-1 ms-3" @click="changeStatus">Modifica stato</button>
+                        </div>
                     </div>
                 </template>
             </ul>
