@@ -22,10 +22,7 @@ body{
     margin: 0 auto;
 }
 
-.done{
+.green{
     color: green;
-}
-
-.undone{
-    color: yellow;
+    text-decoration: line-through;
 }

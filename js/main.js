@@ -41,17 +41,8 @@ createApp({
 
         taskCheck(i){
            console.log(this.tasks[i].status)
-
-           let check = this.tasks[i].status;
-
-            if (this.tasks[i].status==false) {
-                this.tasks[i].status= true;
-            } else {
-                this.tasks[i].status= false;
-            }
-            console.log(this.tasks[i].status);
-            return check;
+           this.tasks[i].status = !this.tasks[i].status;
+           console.log(this.tasks[i].status)
         },
-
     },
   }).mount('#app')
