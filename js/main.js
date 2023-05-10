@@ -20,10 +20,6 @@ createApp({
         {
             text: "Invia la mail",
             status: false,
-        },
-        {
-            text: "Vai in palestra",
-            status: false,
         }
        ]
       }
@@ -40,9 +36,20 @@ createApp({
         },
 
         removeTask(i){
-            this.tasks.splice(i,1)
+            this.tasks.splice(i,1);
+        },
 
-        }
+        taskCheck(i){
+           console.log(this.tasks[i].status)
+
+            if (this.tasks[i].status==false) {
+                this.tasks[i].status= true;
+            } else {
+                this.tasks[i].status= false;
+            }
+            console.log(this.tasks[i].status);
+            return this.tasks[i].status;
+        },
 
     },
   }).mount('#app')
