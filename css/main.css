@@ -1,28 +1,34 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     padding: 3em;
 }
 
-.styleNone{
+.styleNone {
     list-style: none;
     margin-left: 0;
 }
 
-.display{
+.display {
     display: block;
 }
 
-.todoListContainer{
-    max-width: 500px;
+.mainContainer {
+    min-width: 400px;
     margin: 0 auto;
 }
 
-.green{
+.todoListContainer{
+    min-width: 400px;
+    border: 1px solid rgb(215, 214, 214);
+    border-radius: 20px;
+}
+
+.green {
     color: green;
     text-decoration: line-through;
 }

@@ -18,7 +18,15 @@ createApp({
                     status: false,
                 },
                 {
-                    text: "Invia la mail",
+                    text: "Butta la spazzatura",
+                    status: false,
+                },
+                {
+                    text: "Fai l'esercizio",
+                    status: false,
+                },
+                {
+                    text: "Prepara la cena",
                     status: false,
                 }
             ]
