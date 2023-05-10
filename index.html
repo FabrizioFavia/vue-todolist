@@ -23,7 +23,7 @@
                 <template v-for="(task, i) in tasks">
                     <div class="d-flex align-items-center  justify-content-between mt-3">
                         <div>
-                            <li :class="(!check) ? `yellow` : `green`" class="styleNone">{{task.text}}</li>
+                            <li :class="(!check) ? `undone` : `done`" class="styleNone">{{task.text}}</li>
                         </div>
                         <div>
                             <button class="btn btn-danger p-1 ms-3 ps-2 pe-2" @click="removeTask(i)">X</button>

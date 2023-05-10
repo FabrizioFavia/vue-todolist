@@ -25,3 +25,7 @@ body{
 .done{
     color: green;
 }
+
+.undone{
+    color: yellow;
+}
