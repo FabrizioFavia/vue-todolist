@@ -34,13 +34,13 @@ createApp({
             let newTask = {...this.newTaskModel};
             console.log(newTask);
             if (newTask.text.length > 3) {
-                this.tasks.push(newTask);
+                this.tasks.unshift(newTask);
                 this.newTaskModel.text = "";
             } 
         },
 
-        removeTask(){
-            
+        removeTask(i){
+            this.tasks.splice(i,1)
 
         }
 
